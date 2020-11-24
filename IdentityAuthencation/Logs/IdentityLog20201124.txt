@@ -1,0 +1,392 @@
+2020-11-24 08:30:02.944 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 08:32:58.190 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 08:35:03.007 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 08:35:04.322 +07:00 [INF] End calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 08:36:31.287 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 08:36:32.458 +07:00 [ERR] Role Name: Test1 is already taken
+2020-11-24 08:37:25.350 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 08:37:25.391 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 08:37:32.466 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 08:37:32.476 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 08:37:45.362 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 08:37:45.371 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 08:37:52.945 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 08:37:52.958 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 08:38:12.448 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 08:38:12.469 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 08:38:18.516 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 08:38:18.540 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 08:41:07.381 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 08:42:11.049 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 08:50:47.497 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 08:50:48.460 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 08:54:38.544 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 08:55:28.152 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 08:56:35.955 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 09:07:35.348 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:07:36.460 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 09:07:38.786 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:07:38.822 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 09:07:46.986 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:07:47.002 +07:00 [ERR] Role Name: admim is already taken
+2020-11-24 09:08:58.482 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:08:58.492 +07:00 [ERR] Role not found
+2020-11-24 09:10:16.553 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:10:17.482 +07:00 [ERR] Role not found
+2020-11-24 09:10:33.521 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:10:33.566 +07:00 [ERR] Role not found
+2020-11-24 09:12:03.236 +07:00 [INF] Begin calling function <DeleteRole>b__0
+2020-11-24 09:12:04.183 +07:00 [ERR] Role Id: 353c4368-8ad2-4f73-0b2f-08d890192adc not found
+2020-11-24 09:16:28.154 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:16:29.196 +07:00 [ERR] Role Name: admim is already taken
+2020-11-24 09:21:40.837 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:21:41.769 +07:00 [ERR] Role not found
+2020-11-24 09:22:33.914 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:22:33.914 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:22:34.067 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:22:34.114 +07:00 [ERR] Role not found
+2020-11-24 09:22:34.128 +07:00 [ERR] Role not found
+2020-11-24 09:22:34.128 +07:00 [ERR] Role not found
+2020-11-24 09:22:47.408 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:22:54.691 +07:00 [ERR] Role not found
+2020-11-24 09:23:12.426 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:23:12.437 +07:00 [ERR] Role not found
+2020-11-24 09:23:14.176 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:23:14.183 +07:00 [ERR] Role not found
+2020-11-24 09:23:16.389 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:23:16.396 +07:00 [ERR] Role not found
+2020-11-24 09:23:31.476 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:23:31.482 +07:00 [ERR] Role not found
+2020-11-24 09:23:32.875 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:23:32.881 +07:00 [ERR] Role not found
+2020-11-24 09:23:33.371 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:23:33.376 +07:00 [ERR] Role not found
+2020-11-24 09:23:43.245 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:23:43.251 +07:00 [ERR] Role not found
+2020-11-24 09:24:03.791 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:24:04.243 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:24:04.753 +07:00 [ERR] Role not found
+2020-11-24 09:24:04.753 +07:00 [ERR] Role not found
+2020-11-24 09:24:06.671 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:24:06.700 +07:00 [ERR] Role not found
+2020-11-24 09:24:22.629 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:24:29.348 +07:00 [ERR] Role not found
+2020-11-24 09:27:59.906 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:28:17.904 +07:00 [ERR] Role not found
+2020-11-24 09:28:35.603 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:28:45.615 +07:00 [ERR] Role not found
+2020-11-24 09:29:02.335 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:29:06.157 +07:00 [ERR] Role not found
+2020-11-24 09:31:13.670 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:31:30.270 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 09:32:43.587 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:32:44.523 +07:00 [ERR] Role not found
+2020-11-24 09:32:46.553 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:32:46.589 +07:00 [ERR] Role not found
+2020-11-24 09:32:55.832 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:32:55.845 +07:00 [ERR] Role not found
+2020-11-24 09:33:18.677 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:33:18.688 +07:00 [ERR] Role not found
+2020-11-24 09:34:22.729 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:34:23.652 +07:00 [ERR] Role not found
+2020-11-24 09:34:25.266 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:34:25.301 +07:00 [ERR] Role not found
+2020-11-24 09:35:30.090 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:35:31.196 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 09:35:57.291 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:36:47.470 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 09:37:04.334 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:37:04.358 +07:00 [ERR] Role not found
+2020-11-24 09:37:31.147 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:38:04.061 +07:00 [ERR] Role not found
+2020-11-24 09:38:15.816 +07:00 [ERR] Role not found
+2020-11-24 09:38:25.553 +07:00 [ERR] Role not found
+2020-11-24 09:39:11.580 +07:00 [ERR] Role not found
+2020-11-24 09:42:18.078 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:42:19.005 +07:00 [ERR] Role not found
+2020-11-24 09:42:36.003 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:42:38.051 +07:00 [ERR] Role not found
+2020-11-24 09:46:38.129 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:46:39.275 +07:00 [ERR] Role not found
+2020-11-24 09:57:54.151 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 09:57:55.176 +07:00 [INF] End calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 09:58:00.247 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 09:58:00.281 +07:00 [ERR] Role id: 353c4368-8ad2-4f73-0b2f-08d890192adc not found
+2020-11-24 09:59:33.740 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:59:34.895 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 09:59:43.940 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 09:59:43.969 +07:00 [ERR] Role not found
+2020-11-24 10:00:50.619 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 10:00:51.576 +07:00 [INF] End calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 10:00:58.582 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 10:00:58.616 +07:00 [ERR] Role id: 353c4368-8ad2-4f73-0b2f-08d890192adc not found
+2020-11-24 10:07:59.887 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 10:08:01.914 +07:00 [ERR] Role not found
+2020-11-24 10:22:30.140 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 10:22:31.464 +07:00 [ERR] Role not found
+2020-11-24 10:25:42.891 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 10:25:43.893 +07:00 [ERR] Role Name: string is already taken
+2020-11-24 10:37:03.421 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 10:37:04.322 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 10:42:10.799 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 10:42:11.682 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 10:50:19.488 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 10:50:20.378 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 10:50:29.050 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 10:50:29.160 +07:00 [INF] End calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 10:53:19.972 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 10:53:20.842 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 10:53:30.598 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 10:53:30.713 +07:00 [INF] End calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 10:54:32.153 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 10:54:33.117 +07:00 [INF] End calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 10:54:38.525 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 10:54:38.559 +07:00 [ERR] Role id: 353c4368-8ad2-4f73-0b2f-08d890192adc not found
+2020-11-24 10:55:14.074 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 10:55:14.087 +07:00 [ERR] Role not found
+2020-11-24 10:57:10.732 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 10:57:10.878 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 10:58:29.810 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 10:58:29.843 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 11:01:03.415 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:01:04.321 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:01:11.323 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 11:01:11.437 +07:00 [INF] End calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 11:01:15.120 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 11:01:15.131 +07:00 [ERR] Role id: 353c4368-8ad2-4f73-0b2f-08d890192ad3 not found
+2020-11-24 11:01:27.335 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 11:01:27.489 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 11:01:34.446 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 11:01:34.453 +07:00 [ERR] Role not found
+2020-11-24 11:01:43.076 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 11:01:43.108 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 11:01:47.521 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 11:01:47.536 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 11:02:33.083 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 11:02:34.195 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 11:02:42.812 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 11:02:42.846 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 11:03:28.048 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 11:03:28.072 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 11:03:35.144 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 11:03:35.160 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 11:03:39.174 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 11:03:39.187 +07:00 [ERR] Role Name: Test is already taken
+2020-11-24 11:04:28.211 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 11:04:29.215 +07:00 [ERR] Role Name: admin is already taken
+2020-11-24 11:04:40.138 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 11:04:40.166 +07:00 [ERR] Role Name: admin is already taken
+2020-11-24 11:04:58.515 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:04:58.602 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:05:02.325 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:05:02.335 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:05:04.963 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:05:04.971 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:05:06.883 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:05:06.889 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:05:09.220 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:05:09.226 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:05:10.735 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:05:10.742 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:09:12.825 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:09:13.807 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:09:40.626 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:09:40.706 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:09:43.369 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:09:43.378 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:09:46.433 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:04.158 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:05.135 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:07.370 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:07.443 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:08.746 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:08.755 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:10.141 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:10.146 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:12.187 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:12.192 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:14.242 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:14.247 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:43.716 +07:00 [ERR] No thing
+2020-11-24 11:11:44.184 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:11:44.195 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:12:35.366 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:12:36.686 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:16:45.122 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:16:52.415 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:17:01.039 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:17:22.465 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:17:38.340 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:17:40.077 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:17:56.354 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:17:56.359 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:18:00.160 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:18:00.164 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:18:02.754 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:18:02.758 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:18:05.608 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:18:05.613 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:18:08.236 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:18:08.241 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:18:17.824 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:18:17.831 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:20:34.652 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:20:35.622 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:20:36.765 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:20:36.832 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:20:39.822 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:20:39.834 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 11:49:45.778 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 11:49:45.830 +07:00 [ERR] Role name: string not found
+2020-11-24 11:50:11.863 +07:00 [ERR] User Name: Tin123 is already taken
+2020-11-24 13:09:49.759 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 13:09:50.063 +07:00 [ERR] Role name: string not found
+2020-11-24 13:10:26.562 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 13:10:26.567 +07:00 [ERR] Role name:  not found
+2020-11-24 13:12:28.069 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 13:12:28.074 +07:00 [ERR] Role name:  not found
+2020-11-24 13:13:00.577 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 13:13:00.861 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-24 13:22:06.536 +07:00 [ERR] Register Failed
+2020-11-24 13:23:15.081 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 13:23:15.200 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-24 13:23:24.451 +07:00 [ERR] Register Failed
+2020-11-24 13:25:59.053 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 13:25:59.100 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-24 13:25:59.100 +07:00 [ERR] Register Failed
+2020-11-24 13:33:37.131 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 13:33:37.293 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-24 13:34:00.210 +07:00 [ERR] User Name: Tin789 is already taken
+2020-11-24 13:34:07.896 +07:00 [ERR] ConfirmPassword  is not the same Password
+2020-11-24 13:34:59.651 +07:00 [ERR] ConfirmPassword  is not the same Password
+2020-11-24 13:35:12.559 +07:00 [ERR] ConfirmPassword  is not the same Password
+2020-11-24 13:58:06.481 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 13:58:07.945 +07:00 [ERR] Role name: Tests not found
+2020-11-24 13:58:19.279 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 13:58:19.804 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-24 13:59:18.737 +07:00 [ERR] ConfirmPassword  is not the same Password
+2020-11-24 14:04:39.705 +07:00 [ERR] ConfirmPassword  is not the same Password
+2020-11-24 14:04:45.799 +07:00 [ERR] User Name: Tin789 is already taken
+2020-11-24 14:04:57.443 +07:00 [ERR] User Name: Tin789 is already taken
+2020-11-24 14:05:10.284 +07:00 [ERR] Date of birth is required
+2020-11-24 14:06:14.913 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 14:06:15.056 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-24 14:12:47.638 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 14:12:48.767 +07:00 [ERR] Add User to Role failed
+2020-11-24 14:13:13.779 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 14:13:14.197 +07:00 [ERR] Add User to Role failed
+2020-11-24 14:13:23.231 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 14:14:27.436 +07:00 [ERR] Add User to Role failed
+2020-11-24 14:14:48.098 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 14:14:57.044 +07:00 [ERR] User name: Tin789 already belong to Role name: MOD
+2020-11-24 14:16:26.215 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 14:16:27.324 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 14:16:49.166 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 14:16:49.204 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 14:18:01.400 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:18:02.534 +07:00 [INF] End calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:18:11.674 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:18:11.716 +07:00 [ERR] Role Name: test is already taken
+2020-11-24 14:18:18.018 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:18:18.034 +07:00 [INF] End calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:20:53.798 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:20:54.896 +07:00 [INF] End calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:22:40.635 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:22:41.726 +07:00 [INF] End calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:22:59.331 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:22:59.380 +07:00 [ERR] Role Name: VVVV is already taken
+2020-11-24 14:23:07.107 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:23:28.677 +07:00 [INF] End calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:25:20.788 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:25:21.627 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:25:42.860 +07:00 [INF] End calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:29:16.204 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 14:29:17.280 +07:00 [ERR] User name: Tin789 already belong to Role name: MOD
+2020-11-24 14:29:28.426 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 14:29:28.462 +07:00 [ERR] User name: Tin789 already belong to Role name: mOD
+2020-11-24 14:37:51.278 +07:00 [INF] Begin calling function <RemoveUserRole>b__0
+2020-11-24 14:38:16.148 +07:00 [INF] End calling function <RemoveUserRole>b__0
+2020-11-24 14:38:36.874 +07:00 [INF] Begin calling function <RemoveUserRole>b__0
+2020-11-24 14:38:36.902 +07:00 [ERR] User name: Tin123 is not in Role name: USER
+2020-11-24 14:38:56.524 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-24 14:38:59.643 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-24 14:40:55.710 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 14:40:56.602 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-24 14:41:38.315 +07:00 [INF] Begin calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 14:41:42.175 +07:00 [INF] End calling function <CreateRole>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-11-24 15:17:49.565 +07:00 [INF] Begin calling function <Login>b__0 with type System.Threading.Tasks.Task
+2020-11-24 15:18:24.474 +07:00 [INF] Begin calling function <Login>b__0 with type System.Threading.Tasks.Task
+2020-11-24 15:24:31.996 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-24 15:24:33.841 +07:00 [INF] Begin calling function <GenerateJWTToken>b__0 with type System.String
+2020-11-24 15:24:34.875 +07:00 [INF] End calling function <GenerateJWTToken>b__0 with type System.String
+2020-11-24 15:24:36.260 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-24 15:34:45.861 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-24 15:35:24.621 +07:00 [INF] Begin calling function <GenerateJWTToken>b__0 with type System.String
+2020-11-24 15:35:25.911 +07:00 [INF] End calling function <GenerateJWTToken>b__0 with type System.String
+2020-11-24 15:35:30.889 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-24 15:38:42.936 +07:00 [INF] Begin calling function <Login>b__0
+2020-11-24 15:38:54.589 +07:00 [INF] End calling function <Login>b__0
+2020-11-24 15:39:05.601 +07:00 [INF] Begin calling function <Login>b__0
+2020-11-24 15:44:19.785 +07:00 [INF] Begin calling function <Login>b__0
+2020-11-24 15:44:22.397 +07:00 [INF] End calling function <Login>b__0
+2020-11-24 15:44:35.954 +07:00 [INF] Begin calling function <Login>b__0
+2020-11-24 15:44:37.919 +07:00 [INF] End calling function <Login>b__0
+2020-11-24 15:45:44.829 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-24 15:48:21.978 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-24 15:52:32.488 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-24 15:52:33.732 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-24 15:53:47.739 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-24 15:53:48.988 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-24 15:55:51.141 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-24 15:55:52.390 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-24 16:10:07.211 +07:00 [INF] Begin calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:10:08.182 +07:00 [INF] End calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:10:55.218 +07:00 [INF] Begin calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:10:56.150 +07:00 [INF] End calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:13:22.261 +07:00 [INF] Begin calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:13:23.828 +07:00 [INF] End calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:16:48.420 +07:00 [INF] Begin calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:16:49.343 +07:00 [INF] End calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:20:03.690 +07:00 [INF] Begin calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:20:04.613 +07:00 [INF] End calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:28:18.906 +07:00 [INF] Begin calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:28:19.804 +07:00 [INF] End calling function <FindAll>b__8_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-24 16:39:47.126 +07:00 [INF] Begin calling function <FindbyId>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-24 16:39:49.109 +07:00 [INF] End calling function <FindbyId>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-24 16:40:56.873 +07:00 [INF] Begin calling function <FindbyId>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-24 16:40:57.863 +07:00 [INF] End calling function <FindbyId>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-24 16:41:03.547 +07:00 [INF] Begin calling function <FindbyId>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-24 16:41:03.598 +07:00 [ERR] User Id: 8cafa66f-0523-4183-c50b-08d890413de7 not found
+2020-11-24 17:04:13.634 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 17:04:14.827 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 17:26:10.527 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 17:26:11.658 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 17:26:34.482 +07:00 [INF] Begin calling function <UpdateRole>b__0
+2020-11-24 17:26:49.281 +07:00 [INF] End calling function <UpdateRole>b__0
+2020-11-24 17:27:26.426 +07:00 [INF] Begin calling function <Update>b__0
+2020-11-24 17:27:26.572 +07:00 [ERR] User Name: string is already taken
+2020-11-24 17:28:22.274 +07:00 [INF] Begin calling function <Update>b__0
+2020-11-24 17:28:22.660 +07:00 [ERR] User Name: Tin123 is already taken
+2020-11-24 17:28:42.741 +07:00 [INF] Begin calling function <Update>b__0
+2020-11-24 17:29:38.660 +07:00 [ERR] User Name: Tin123 is already taken
+2020-11-24 17:30:18.400 +07:00 [INF] Begin calling function <Update>b__0
+2020-11-24 17:31:14.062 +07:00 [INF] End calling function <Update>b__0
+2020-11-24 17:32:12.827 +07:00 [INF] Begin calling function <Update>b__0
+2020-11-24 17:32:29.803 +07:00 [INF] End calling function <Update>b__0
+2020-11-24 17:35:03.326 +07:00 [INF] Begin calling function <Update>b__0
+2020-11-24 17:35:36.281 +07:00 [INF] End calling function <Update>b__0
+2020-11-24 17:36:25.632 +07:00 [INF] Begin calling function <Update>b__0
+2020-11-24 17:36:25.845 +07:00 [INF] End calling function <Update>b__0
+2020-11-24 17:38:04.587 +07:00 [INF] Begin calling function <Update>b__0
+2020-11-24 17:39:12.779 +07:00 [INF] Begin calling function <Update>b__0
+2020-11-24 17:39:13.882 +07:00 [INF] End calling function <Update>b__0
+2020-11-24 17:39:27.351 +07:00 [INF] Begin calling function <Update>b__0
+2020-11-24 17:39:27.377 +07:00 [ERR] User Id: 8cafa66f-0523-4183-c50b-08d890413dd8 not found
+2020-11-24 17:39:48.264 +07:00 [INF] Begin calling function <Update>b__0
+2020-11-24 17:39:48.277 +07:00 [ERR] User Name: Tin789 is already taken
+2020-11-24 17:41:16.416 +07:00 [INF] Begin calling function <RegisterUSer>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-24 17:41:21.080 +07:00 [ERR] Date of birth is required
+2020-11-24 17:47:20.503 +07:00 [INF] Begin calling function <Delete>b__0
+2020-11-24 17:47:21.478 +07:00 [ERR] User Id: 8cafa66f-0523-4183-c50b-08d890413dd8 not found
+2020-11-24 17:47:33.974 +07:00 [INF] Begin calling function <Delete>b__0
+2020-11-24 17:47:34.299 +07:00 [INF] End calling function <Delete>b__0
