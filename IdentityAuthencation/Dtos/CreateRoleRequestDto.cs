@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace IdentityAuthencation.Dtos
 {
-    public class CreateRoleRequestDtos
+    public class CreateRoleRequestDto
     {
-        public string RoleName { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
     }
 }

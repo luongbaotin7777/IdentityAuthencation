@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace IdentityAuthencation.Dtos
 {
-    public class AddToRoleModel
+    public class AddToRoleDto
     {
         [Required]
         public string UserName { get; set; }
         [Required]
-        public string RoleName { get; set; }
+        public string Name { get; set; }
     }
 }

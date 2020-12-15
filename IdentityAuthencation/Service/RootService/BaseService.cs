@@ -1,11 +1,6 @@
-﻿using IdentityAuthencation.Helpers;
-using IdentityAuthencation.Logger;
+﻿using IdentityAuthencation.Logger;
 using IdentityAuthencation.Repository;
-using Serilog;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 
@@ -23,17 +18,20 @@ namespace IdentityAuthencation.Service.RootService
         protected async Task ProcessRequest(Func<Task> func)
         {
             var methodInfo = func.GetMethodInfo().Name;
-                _logger.LogInfo("Begin calling function " + methodInfo);
-                await func();
-                _logger.LogInfo("End calling function " + methodInfo); 
+            _logger.LogInfo("Begin calling function " + methodInfo);
+
+            await func();
+            _logger.LogInfo("End calling function " + methodInfo);
         }
         protected async Task<T> ProcessRequest<T>(Func<Task<T>> func)
-        { 
-                var methodInfo = func.GetMethodInfo().Name;
-                _logger.LogInfo($"Begin calling function {methodInfo} with type {typeof(T)}");
-                var result = await func();
-                _logger.LogInfo($"End calling function {methodInfo} with type {typeof(T)}");
-                return result;
+        {
+            var methodInfo = func.GetMethodInfo().Name;
+            _logger.LogInfo($"Begin calling function {methodInfo} with type {typeof(T)}");
+
+            var result = await func();
+            _logger.LogInfo($"End calling function {methodInfo} with type {typeof(T)}");
+
+            return result;
         }
     }
 }

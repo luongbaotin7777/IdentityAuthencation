@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using Serilog;
 
 
@@ -8,7 +8,6 @@ namespace IdentityAuthencation.Logger
     {
         public LoggerManager()
         {
-
         }
         public void LogDebug(string message)
         {

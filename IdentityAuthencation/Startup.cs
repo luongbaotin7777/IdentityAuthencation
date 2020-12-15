@@ -23,13 +23,17 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using static IdentityAuthencation.Authorization.Permission;
 using Serilog;
+using Microsoft.AspNetCore.Authorization;
+using IdentityAuthencation.Authorization.AuthorizationHandler;
+using IdentityAuthencation.SeedData;
+
 namespace IdentityAuthencation
 {
     public class Startup
     {
         public Startup(IConfiguration configuration)
         {
-            
+
             Configuration = configuration;
         }
 
@@ -41,16 +45,19 @@ namespace IdentityAuthencation
             services.ConfigSqlContext(Configuration);
             services.ConfigIdentityContext();
             services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
-            services.AddSwaggerGen();
+            services.ConfigureSwagger();
             services.ConfigService();
             services.ConfigPermission();
             services.ConfigureLoggerService();
             services.ConfigJwtToken(Configuration);
+
             services.AddControllers();
+
         }
 
-       
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, UserManager<ApplicationUser> userManager,
+        RoleManager<ApplicationRole> roleManager)
         {
             if (env.IsDevelopment())
             {
@@ -69,6 +76,7 @@ namespace IdentityAuthencation
             });
             app.UseRouting();
             app.UseAuthentication();
+            //MyIdentityDataInitializer.SeedData(userManager, roleManager);
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

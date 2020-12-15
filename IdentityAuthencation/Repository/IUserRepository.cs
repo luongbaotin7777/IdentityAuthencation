@@ -9,5 +9,7 @@ namespace IdentityAuthencation.Repository
 {
     public interface IUserRepository : IRepositoryBase<ApplicationUser>
     {
+        Task<IEnumerable<ApplicationUser>> GetAllUser();
+        Task<ApplicationUser> GetUserById(Guid UserId);
     }
 }

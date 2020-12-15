@@ -4,14 +4,16 @@ using IdentityAuthencation.Repository.BaseRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IdentityAuthencation.Migrations
 {
     [DbContext(typeof(RepositoryDbContext))]
-    partial class RepositoryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201215075828_added refresh tokens")]
+    partial class addedrefreshtokens
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -531,9 +533,6 @@ namespace IdentityAuthencation.Migrations
                                 .HasColumnType("int")
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                            b1.Property<string>("AccessToken")
-                                .HasColumnType("nvarchar(max)");
-
                             b1.Property<Guid>("ApplicationUserId")
                                 .HasColumnType("uniqueidentifier");
 
@@ -551,6 +550,9 @@ namespace IdentityAuthencation.Migrations
 
                             b1.Property<DateTime?>("Revoked")
                                 .HasColumnType("datetime2");
+
+                            b1.Property<string>("RevokedByIp")
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("Token")
                                 .HasColumnType("nvarchar(max)");

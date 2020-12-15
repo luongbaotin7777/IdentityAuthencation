@@ -13,29 +13,20 @@ namespace IdentityAuthencation.Helpers
         public AutoMapperProfile()
         {
             //Role
-            CreateMap<ApplicationRole, RoleRequestDto>()
-             .ForMember(destination => destination.RoleName, options => options.MapFrom(source => source.Name));
-            CreateMap<RoleRequestDto, ApplicationRole>()
-                .ForMember(destination => destination.Name, options => options.MapFrom(source => source.RoleName));
+            CreateMap<ApplicationRole, RoleRequestDto>();
+            CreateMap<RoleRequestDto, ApplicationRole>();
 
-            CreateMap<CreateRoleRequestDtos, ApplicationRole>()
-                 .ForMember(destination => destination.Name, options => options.MapFrom(source => source.RoleName)); ;
-            CreateMap<ApplicationRole, CreateRoleRequestDtos>()
-                 .ForMember(destination => destination.RoleName, options => options.MapFrom(source => source.Name)); ;
-
+            CreateMap<CreateRoleRequestDto, ApplicationRole>();
+            CreateMap<ApplicationRole, CreateRoleRequestDto>();
             //User
-            CreateMap<ApplicationUser, RegisterRequestDto>()
-                .ForMember(destination => destination.UserName, options => options.MapFrom(source => source.UserName))
-                .ForMember(destination => destination.Email, options => options.MapFrom(source => source.Email))
-                .ForMember(destination => destination.PhoneNumber, options => options.MapFrom(source => source.PhoneNumber));
+            CreateMap<ApplicationUser, RegisterRequestDto>();
+            CreateMap<RegisterRequestDto, ApplicationUser>();
 
-            CreateMap<RegisterRequestDto, ApplicationUser>()
-                .ForMember(destination => destination.UserName, options => options.MapFrom(source => source.UserName))
-                .ForMember(destination => destination.Email, options => options.MapFrom(source => source.Email))
-                .ForMember(destination => destination.PhoneNumber, options => options.MapFrom(source => source.PhoneNumber));
+            CreateMap<RegisterDto, ApplicationUser>();
 
             CreateMap<UserDto, ApplicationUser>();
-            CreateMap<ApplicationUser, UserDto>();
+            CreateMap<ApplicationUser, UserDto>()
+                .ForMember(dto => dto.roles, opt => opt.MapFrom(x => x.UserRoles.Select(y => y.Role).ToList()));
 
             CreateMap<UpdateUserRequestDto, ApplicationUser>();
             CreateMap<ApplicationUser, UpdateUserRequestDto>();

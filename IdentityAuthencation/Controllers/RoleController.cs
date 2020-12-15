@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using IdentityAuthencation.Dtos;
-using IdentityAuthencation.Entities;
 using IdentityAuthencation.Helpers;
 using IdentityAuthencation.Service.Interface;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IdentityAuthencation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "superadministrator")]
     public class RoleController : ControllerBase
     {
         private readonly IRoleService _roleService;
@@ -23,14 +22,17 @@ namespace IdentityAuthencation.Controllers
             _roleService = roleService;
             _mapper = mapper;
         }
+
         //GET api/role/GetAll
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAllRole()
         {
             var roles = await _roleService.GetAllRole();
             var roleDtos = _mapper.Map<IList<RoleRequestDto>>(roles);
+
             return Ok(roleDtos);
         }
+
         //Get api/role/roleId
         [HttpGet("{RoleId}")]
         public async Task<IActionResult> GetRoleById(Guid RoleId)
@@ -39,37 +41,23 @@ namespace IdentityAuthencation.Controllers
             {
                 var roles = await _roleService.GetRoleById(RoleId);
                 var roleDtos = _mapper.Map<RoleRequestDto>(roles);
+
                 return Ok(roleDtos);
             }
             catch (AppException ex)
             {
                 return BadRequest(new { message = ex.Message });
             }
-
-
-
         }
+
         //Post api/role/create
         [HttpPost("Create")]
-        public async Task<IActionResult> CreateRole(CreateRoleRequestDtos request)
+        public async Task<IActionResult> CreateRole(CreateRoleRequestDto request)
         {
             try
             {
                 await _roleService.CreateRole(request);
-                return Ok();
-            }catch(AppException ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
-        }
-        //Put api/role/roleId
-        [HttpPut("{RoleId}")]
-        public async Task<IActionResult> UpdateRole(Guid RoleId, CreateRoleRequestDtos model)
-        {
-            
-            try
-            {
-                await _roleService.UpdateRole(RoleId, model);
+
                 return Ok();
             }
             catch (AppException ex)
@@ -77,6 +65,24 @@ namespace IdentityAuthencation.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
+
+        //Put api/role/roleId
+        [HttpPut("{RoleId}")]
+        public async Task<IActionResult> UpdateRole(Guid RoleId, CreateRoleRequestDto model)
+        {
+
+            try
+            {
+                await _roleService.UpdateRole(RoleId, model);
+
+                return Ok();
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
         //Delete api/role/roleId
         [HttpDelete("{RoleId}")]
         public async Task<IActionResult> DeleteRole(Guid RoleId)
@@ -84,6 +90,7 @@ namespace IdentityAuthencation.Controllers
             try
             {
                 await _roleService.DeleteRole(RoleId);
+
                 return Ok();
             }
             catch (AppException ex)
@@ -93,18 +100,21 @@ namespace IdentityAuthencation.Controllers
 
 
         }
+
         [HttpGet("FindRole")]
         public async Task<IActionResult> FindRole(string Name)
         {
-                return Ok(await _roleService.FindRole(Name)); 
+            return Ok(await _roleService.FindRole(Name));
         }
+
         //Post api/role/addusertorole
         [HttpPost("AddUserToRole")]
-        public async Task<IActionResult> AddUserToRole(AddToRoleModel model)
+        public async Task<IActionResult> AddUserToRole(AddToRoleDto model)
         {
             try
             {
                 await _roleService.AddUserToRole(model);
+
                 return Ok();
             }
             catch (AppException ex)
@@ -114,21 +124,21 @@ namespace IdentityAuthencation.Controllers
 
 
         }
+
         //Post api/role/addusertorole
         [HttpPost("RemoveUserRole")]
-        public async Task<IActionResult> RemoveUserRole(AddToRoleModel model)
+        public async Task<IActionResult> RemoveUserRole(AddToRoleDto model)
         {
             try
             {
                 await _roleService.RemoveUserRole(model);
+
                 return Ok();
             }
             catch (AppException ex)
             {
                 return BadRequest(new { message = ex.Message });
             }
-
-
         }
     }
 }

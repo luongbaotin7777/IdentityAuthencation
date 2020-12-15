@@ -19,7 +19,7 @@ namespace IdentityAuthencation.Authorization
         public static class Dashboards
         {
             public const string View = "Permissions.Dashboards.View";
-          
+
         }
         public static class Products
         {

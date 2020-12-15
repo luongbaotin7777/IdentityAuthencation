@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace IdentityAuthencation.Entities
 {
-    public class ApplicationRole:IdentityRole<Guid>
+    public class ApplicationRole : IdentityRole<Guid>
     {
-        
+
         public string Description { get; set; }
         public virtual ICollection<ApplicationUserRole> UserRoles { get; set; }
         public virtual ICollection<ApplicationRoleClaim> RoleClaims { get; set; }

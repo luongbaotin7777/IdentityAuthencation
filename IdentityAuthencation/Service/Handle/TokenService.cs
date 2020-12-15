@@ -1,5 +1,5 @@
 ﻿
-using IdentityAuthencation.Common;
+using IdentityAuthencation.Dtos;
 using IdentityAuthencation.Entities;
 using IdentityAuthencation.Helpers;
 using IdentityAuthencation.Logger;
@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,34 +29,47 @@ namespace IdentityAuthencation.Service.Handle
             _configuration = configuration;
             _userManager = userManager;
         }
-        public async Task<string> GenerateJWTToken(string UserName, int expDay)
+
+        public async Task<string> GenerateJWTToken(ApplicationUser user, int expMinute)
         {
-            var user = await _userManager.FindByNameAsync(UserName);
-            var authSignKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwts:Key"]));
-            var userRoles = await _userManager.GetRolesAsync(user);
-            var claim = new List<Claim>()
+            SymmetricSecurityKey authSignKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwts:Key"]));
+            IList<string> userRoles = await _userManager.GetRolesAsync(user);
+
+            List<Claim> claim = new List<Claim>()
                 {
                     new Claim(ClaimTypes.Name,user.UserName),
                     new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
                     new Claim(ClaimTypes.GivenName,user.FirstName),
                     new Claim(ClaimTypes.Surname,user.LastName),
                     new Claim(ClaimTypes.Email,user.Email),
-                    new Claim(ClaimTypes.Role,string.Join(";",userRoles)),
-
+                    new Claim(ClaimTypes.Role,string.Join(";",userRoles))
                 };
-            var token = new JwtSecurityToken(
+
+            JwtSecurityToken token = new JwtSecurityToken(
                        claims: claim,
-                       expires: DateTime.UtcNow.AddDays(expDay),
+                       notBefore: DateTime.UtcNow,
+                       expires: DateTime.UtcNow.AddMinutes(expMinute),
                        signingCredentials: new SigningCredentials(authSignKey, SecurityAlgorithms.HmacSha256)
                    );
-           return new JwtSecurityTokenHandler().WriteToken(token);
-          
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
+        public RefreshToken GenerateRefreshJWTToken(ApplicationUser user)
+        {
+            var rngCryptoServiceProvider = new RNGCryptoServiceProvider();
+            var randomBytes = new byte[64];
+            var jwtToken = GenerateJWTToken(user, 5);
+            rngCryptoServiceProvider.GetBytes(randomBytes);
 
-        //var token = tokenHandler.CreateToken(tokenDescriptor);
-
-
+            return new RefreshToken
+            {
+                Token = Convert.ToBase64String(randomBytes),
+                AccessToken = jwtToken,
+                Expires = DateTime.UtcNow.AddDays(30),
+                Created = DateTime.UtcNow,
+            };
+        }
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IdentityAuthencation.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
@@ -15,5 +16,7 @@ namespace IdentityAuthencation.Dtos
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime? Dob { get; set; }
+
+        public virtual IList<CreateRoleRequestDto> roles { get; set; }
     }
 }

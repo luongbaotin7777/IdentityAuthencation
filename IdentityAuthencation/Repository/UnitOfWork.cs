@@ -11,12 +11,12 @@ namespace IdentityAuthencation.Repository
         private readonly RepositoryDbContext _context;
         private IUserRepository _user;
         private IRoleRepository _role;
-       
 
         public UnitOfWork(RepositoryDbContext context)
         {
             _context = context;
         }
+
         public IUserRepository User
         {
             get
@@ -28,6 +28,7 @@ namespace IdentityAuthencation.Repository
                 return _user;
             }
         }
+
         public IRoleRepository Role
         {
             get
@@ -40,8 +41,6 @@ namespace IdentityAuthencation.Repository
             }
         }
 
-
-
         public void Save()
         {
             _context.SaveChanges();
@@ -52,6 +51,5 @@ namespace IdentityAuthencation.Repository
             await _context.SaveChangesAsync();
 
         }
-
     }
 }

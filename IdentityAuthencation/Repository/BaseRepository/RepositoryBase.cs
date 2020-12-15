@@ -15,7 +15,6 @@ namespace IdentityAuthencation.Repository.BaseRepository
             _context = context;
         }
 
-
         public IQueryable<T> GetAll()
         {
             return _context.Set<T>().AsNoTracking();
@@ -26,7 +25,6 @@ namespace IdentityAuthencation.Repository.BaseRepository
             return await _context.Set<T>().ToListAsync();
         }
 
-
         public T FindById(Guid id)
         {
             return _context.Set<T>().Find(id);
@@ -36,20 +34,22 @@ namespace IdentityAuthencation.Repository.BaseRepository
         {
             return await _context.Set<T>().FindAsync(id);
         }
+
         public T FindById(int id)
         {
             return _context.Set<T>().Find(id);
         }
 
-
         public async Task<T> FindByIdAsync(int id)
         {
             return await _context.Set<T>().FindAsync(id);
         }
+
         public async Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> expression)
         {
             return await _context.Set<T>().FirstOrDefaultAsync(expression);
         }
+
         public T SingleOrDefault(Expression<Func<T, bool>> expression)
         {
             return _context.Set<T>().SingleOrDefault(expression);
@@ -64,6 +64,7 @@ namespace IdentityAuthencation.Repository.BaseRepository
         {
             return await _context.Set<T>().Where(expression).ToListAsync();
         }
+
         public async Task<bool> GetByAnyConditionAsync(Expression<Func<T, bool>> expression)
         {
             return await _context.Set<T>().AnyAsync(expression);
@@ -89,11 +90,14 @@ namespace IdentityAuthencation.Repository.BaseRepository
             _context.Set<T>().Remove(entity);
         }
 
-
-
         public void Update(T entity)
         {
             _context.Set<T>().Update(entity);
+        }
+
+        public async Task<List<T>> FromSqlQueryAsync(string sql)
+        {
+            return await _context.Set<T>().FromSqlRaw(sql).ToListAsync();
         }
 
 

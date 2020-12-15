@@ -29,8 +29,6 @@ namespace IdentityAuthencation.Repository.BaseRepository
                 b.Property(p => p.FirstName).HasMaxLength(80).IsRequired();
                 b.Property(p => p.LastName).HasMaxLength(80).IsRequired();
 
-
-
                 // Each User can have many UserClaims
                 b.HasMany(e => e.Claims)
                     .WithOne(e => e.User)
@@ -40,11 +38,13 @@ namespace IdentityAuthencation.Repository.BaseRepository
                    .WithOne()
                    .HasForeignKey(ul => ul.UserId)
                    .IsRequired();
+
                 // Each User can have many UserTokens
                 b.HasMany(e => e.Tokens)
                     .WithOne(e => e.User)
                     .HasForeignKey(ut => ut.UserId)
                     .IsRequired();
+
                 // Each User can have many entries in the UserRole join table
                 b.HasMany(e => e.UserRoles)
                     .WithOne(e => e.User)
@@ -71,6 +71,7 @@ namespace IdentityAuthencation.Repository.BaseRepository
                     .HasForeignKey(rc => rc.RoleId)
                     .IsRequired();
             });
+
             modelBuilder.Entity<ApplicationUserRole>(b =>
             {
                 b.ToTable("AppUserRoles");
@@ -90,6 +91,7 @@ namespace IdentityAuthencation.Repository.BaseRepository
              {
                  b.ToTable("AppUserTokens");
              });
+
             //Seed Data
             modelBuilder.Seed();
         }

@@ -1,0 +1,182 @@
+2020-11-26 08:21:48.537 +07:00 [INF] Begin calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 08:21:50.890 +07:00 [INF] End calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 08:22:06.166 +07:00 [INF] Begin calling function <FindbyId>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-26 08:22:06.281 +07:00 [INF] End calling function <FindbyId>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-26 09:33:18.296 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:33:19.258 +07:00 [ERR] User Name: ewr not found
+2020-11-26 09:41:12.146 +07:00 [INF] Begin calling function <RegisterUSer>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-26 09:41:13.604 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-26 09:41:13.616 +07:00 [ERR] Role name: string not found
+2020-11-26 09:42:38.322 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:42:38.365 +07:00 [ERR] Please enter currentPassword, not White Space
+2020-11-26 09:42:42.210 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:42:42.210 +07:00 [ERR] Please enter UserName
+2020-11-26 09:42:43.280 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:42:43.281 +07:00 [ERR] Please enter UserName
+2020-11-26 09:42:47.163 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:42:47.163 +07:00 [ERR] Please enter currentPassword, not White Space
+2020-11-26 09:42:50.021 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:42:50.021 +07:00 [ERR] Please enter passwordConfirm, not White Space
+2020-11-26 09:42:51.749 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:42:51.749 +07:00 [ERR] Please enter newPassword, not White Space
+2020-11-26 09:42:54.470 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:42:54.471 +07:00 [ERR] Please enter newPassword, not White Space
+2020-11-26 09:43:01.381 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:43:02.268 +07:00 [ERR] User Name: ttt not found
+2020-11-26 09:43:34.304 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:43:34.404 +07:00 [ERR] The confirmation password is not the same as the password
+2020-11-26 09:43:42.408 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:43:42.480 +07:00 [ERR] Incorrect Current Password,Please try again
+2020-11-26 09:43:53.751 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:43:53.769 +07:00 [ERR] Incorrect Current Password,Please try again
+2020-11-26 09:43:55.930 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:43:56.096 +07:00 [INF] End calling function <ChangePassword>b__0
+2020-11-26 09:44:12.042 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 09:44:12.092 +07:00 [ERR] Login Failed
+2020-11-26 09:44:17.181 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 09:44:18.128 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 09:44:21.961 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:44:21.982 +07:00 [ERR] Incorrect Current Password,Please try again
+2020-11-26 09:44:29.694 +07:00 [INF] Begin calling function <ChangePassword>b__0
+2020-11-26 09:44:29.719 +07:00 [INF] End calling function <ChangePassword>b__0
+2020-11-26 10:22:41.973 +07:00 [INF] Begin calling function <ExternalLoginCallback>b__6_0 with type System.String
+2020-11-26 10:22:43.121 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-26 10:22:43.278 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-26 10:22:43.465 +07:00 [INF] End calling function <ExternalLoginCallback>b__6_0 with type System.String
+2020-11-26 10:55:34.746 +07:00 [INF] Begin calling function <RegisterUSer>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-26 10:55:37.537 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-26 10:55:37.719 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-26 10:55:37.719 +07:00 [INF] End calling function <RegisterUSer>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-26 10:57:08.107 +07:00 [INF] Begin calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 10:57:09.186 +07:00 [INF] End calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 10:58:22.519 +07:00 [INF] Begin calling function <Delete>b__0
+2020-11-26 10:58:22.778 +07:00 [INF] End calling function <Delete>b__0
+2020-11-26 10:59:11.086 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 10:59:11.578 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 10:59:53.065 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 10:59:53.078 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:00:10.580 +07:00 [INF] Begin calling function <RemoveUserRole>b__0
+2020-11-26 11:00:10.665 +07:00 [INF] End calling function <RemoveUserRole>b__0
+2020-11-26 11:00:38.840 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-26 11:00:38.895 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-26 11:01:48.205 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:01:49.470 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:02:24.787 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:02:24.832 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:03:04.489 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:03:05.814 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:03:15.507 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:03:15.535 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:03:22.372 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:03:22.400 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:04:05.350 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:04:06.468 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:04:14.223 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:04:14.254 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:20:09.237 +07:00 [INF] Begin calling function <RegisterUSer>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-26 11:20:10.886 +07:00 [INF] End calling function <RegisterUSer>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-26 11:36:10.386 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:37:46.480 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:37:47.913 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:38:15.307 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:38:15.357 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:39:09.975 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:39:10.012 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:42:35.420 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:42:35.473 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:45:13.115 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:45:14.505 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:45:25.681 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:45:25.710 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:47:55.265 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:47:56.509 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:50:08.829 +07:00 [INF] Begin calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 11:50:10.006 +07:00 [INF] End calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 11:52:01.430 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 11:52:02.709 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 11:54:03.872 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:54:03.939 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:56:09.442 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:56:09.492 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:56:20.396 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:56:20.401 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:56:59.142 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 11:57:00.097 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 12:21:15.054 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 12:21:16.188 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 12:21:20.205 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 12:21:20.232 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 12:30:42.063 +07:00 [INF] Begin calling function <GetAllRole>b__5_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 12:30:42.134 +07:00 [INF] End calling function <GetAllRole>b__5_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-11-26 12:43:51.764 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 12:43:52.817 +07:00 [ERR] Login Failed
+2020-11-26 12:43:58.947 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 12:43:59.230 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 12:44:17.134 +07:00 [INF] Begin calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 12:44:17.279 +07:00 [INF] End calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 12:44:24.711 +07:00 [INF] Begin calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 12:44:24.716 +07:00 [INF] End calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 13:52:23.184 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 13:52:23.522 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 13:52:32.319 +07:00 [INF] Begin calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 13:52:32.377 +07:00 [INF] End calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-11-26 13:56:42.015 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 13:56:42.345 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 13:57:02.676 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 13:57:02.710 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 13:58:19.852 +07:00 [INF] Begin calling function <RegisterUSerByAdmin>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-26 13:58:20.176 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-26 13:58:20.231 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-26 13:58:20.231 +07:00 [INF] End calling function <RegisterUSerByAdmin>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-26 14:00:38.564 +07:00 [INF] Begin calling function <RegisterUSerByAdmin>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-26 14:00:38.900 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-11-26 14:00:38.990 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-11-26 14:00:38.990 +07:00 [INF] End calling function <RegisterUSerByAdmin>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-11-26 14:16:32.289 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:16:33.718 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 14:18:10.642 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:18:10.677 +07:00 [ERR] User Name: SuperAdmin not found
+2020-11-26 14:18:18.920 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:18:18.938 +07:00 [ERR] User Name: SuperAdmin not found
+2020-11-26 14:18:38.534 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:18:38.540 +07:00 [ERR] User Name: SuperAdmin not found
+2020-11-26 14:18:39.363 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:18:39.372 +07:00 [ERR] User Name: SuperAdmin not found
+2020-11-26 14:19:15.109 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:19:16.088 +07:00 [ERR] User Name: SuperAdmin not found
+2020-11-26 14:19:41.718 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:21:34.936 +07:00 [ERR] User Name: SuperAdmin not found
+2020-11-26 14:21:43.276 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:21:44.930 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:21:45.041 +07:00 [ERR] Login Failed
+2020-11-26 14:21:45.042 +07:00 [ERR] Login Failed
+2020-11-26 14:21:54.442 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:21:54.680 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 14:22:12.984 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:22:13.395 +07:00 [ERR] Login Failed
+2020-11-26 14:22:21.714 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:23:22.853 +07:00 [ERR] Login Failed
+2020-11-26 14:23:40.297 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:24:49.936 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:24:51.200 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 14:24:58.487 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:24:58.524 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 14:25:14.936 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:25:14.945 +07:00 [ERR] User Name: SuperAdmin not found
+2020-11-26 14:25:28.079 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:25:28.089 +07:00 [ERR] User Name: SUPERADMIN not found
+2020-11-26 14:25:37.486 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:25:37.492 +07:00 [ERR] User Name: superadmin not found
+2020-11-26 14:26:14.090 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:26:15.357 +07:00 [INF] End calling function <Login>b__0 with type System.String
+2020-11-26 14:26:21.110 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:26:21.135 +07:00 [ERR] User Name: superadmin not found
+2020-11-26 14:26:29.263 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:26:29.275 +07:00 [ERR] User Name: SuperAdmin not found
+2020-11-26 14:26:37.127 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:26:37.132 +07:00 [ERR] User Name: SUPERADMIN not found
+2020-11-26 14:27:32.705 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:27:33.686 +07:00 [ERR] Login Failed
+2020-11-26 14:27:41.414 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
+2020-11-26 14:29:01.916 +07:00 [ERR] Login Failed
+2020-11-26 14:29:13.090 +07:00 [INF] Begin calling function <Login>b__0 with type System.String
