@@ -14,9 +14,8 @@ namespace IdentityAuthencation.Entities
         [Key]
         [JsonIgnore]
         public int Id { get; set; }
-
-        public Task<string> AccessToken { get; set; }
         public string Token { get; set; }
+        public string AccessToken { get; set; }
         public DateTime Expires { get; set; }
         public bool IsExpired => DateTime.UtcNow >= Expires;
         public DateTime Created { get; set; }

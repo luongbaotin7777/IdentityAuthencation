@@ -9,7 +9,9 @@ namespace IdentityAuthencation.Repository
     {
         IUserRepository User { get; }
         IRoleRepository Role { get; }
-     
+        IUserRoleRepository UserRole { get; }
+        IUserClaimRepository UserClaim { get; }
+
         void Save();
         Task SaveAsync();
     }

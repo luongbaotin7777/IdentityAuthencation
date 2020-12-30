@@ -99,7 +99,5 @@ namespace IdentityAuthencation.Repository.BaseRepository
         {
             return await _context.Set<T>().FromSqlRaw(sql).ToListAsync();
         }
-
-
     }
 }

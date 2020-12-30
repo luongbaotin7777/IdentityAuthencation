@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IdentityAuthencation.Dtos
 {
-    public class RegisterRequestDto
+    public class RegisterAdminDto
     {
         [Required]
         public string UserName { get; set; }

@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace IdentityAuthencation.Repository
 {
-    public interface IRoleRepository : IRepositoryBase<ApplicationRole>
+    public class UserRoleRepository : RepositoryBase<ApplicationUserRole>, IUserRoleRepository
     {
-        Task<ApplicationRole> FindByNameAsync(string roleName);
+        public UserRoleRepository(RepositoryDbContext applicationDbContext)
+            : base(applicationDbContext)
+        {
+        }
     }
 }

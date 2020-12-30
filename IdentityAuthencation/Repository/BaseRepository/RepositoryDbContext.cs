@@ -91,7 +91,6 @@ namespace IdentityAuthencation.Repository.BaseRepository
              {
                  b.ToTable("AppUserTokens");
              });
-
             //Seed Data
             modelBuilder.Seed();
         }

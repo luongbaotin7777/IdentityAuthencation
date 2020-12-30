@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace IdentityAuthencation.Migrations
 {
-    public partial class SeedPermission : Migration
+    public partial class addroleclaim : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,16 +12,18 @@ namespace IdentityAuthencation.Migrations
                 columns: new[] { "Id", "ClaimType", "ClaimValue", "RoleId" },
                 values: new object[,]
                 {
-                    { 1, "permission", "Permissions.Users.View", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
+                    { 1, "permission", "Permissions.Users.View", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 20, "permission", "Permissions.Categories.View", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
+                    { 21, "permission", "Permissions.Categories.Create", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
                     { 22, "permission", "Permissions.Categories.Edit", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
                     { 23, "permission", "Permissions.Categories.Delete", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
                     { 24, "permission", "Permissions.Products.View", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
                     { 25, "permission", "Permissions.Products.Create", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
                     { 26, "permission", "Permissions.Products.Edit", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
                     { 27, "permission", "Permissions.Products.Delete", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
+                    { 19, "permission", "Permissions.Users.Edit", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
                     { 28, "permission", "Permissions.Dashboards.View", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
-                    { 21, "permission", "Permissions.Categories.Create", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
-                    { 29, "permission", "Permissions.Dashboards.View", new Guid("f58eae8e-0cba-4ed8-69e1-08d88f67500f") },
+                    { 30, "permission", "Permissions.Categories.View", new Guid("f58eae8e-0cba-4ed8-69e1-08d88f67500f") },
                     { 31, "permission", "Permissions.Categories.Create", new Guid("f58eae8e-0cba-4ed8-69e1-08d88f67500f") },
                     { 32, "permission", "Permissions.Categories.Edit", new Guid("f58eae8e-0cba-4ed8-69e1-08d88f67500f") },
                     { 33, "permission", "Permissions.Products.View", new Guid("f58eae8e-0cba-4ed8-69e1-08d88f67500f") },
@@ -29,27 +31,29 @@ namespace IdentityAuthencation.Migrations
                     { 35, "permission", "Permissions.Products.Edit", new Guid("f58eae8e-0cba-4ed8-69e1-08d88f67500f") },
                     { 36, "permission", "Permissions.Products.View", new Guid("63730b7b-6127-4f9b-0398-08d8904c62b4") },
                     { 37, "permission", "Permissions.Products.Create", new Guid("63730b7b-6127-4f9b-0398-08d8904c62b4") },
-                    { 30, "permission", "Permissions.Categories.View", new Guid("f58eae8e-0cba-4ed8-69e1-08d88f67500f") },
+                    { 29, "permission", "Permissions.Dashboards.View", new Guid("f58eae8e-0cba-4ed8-69e1-08d88f67500f") },
                     { 38, "permission", "Permissions.Categories.View", new Guid("63730b7b-6127-4f9b-0398-08d8904c62b4") },
-                    { 20, "permission", "Permissions.Categories.View", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
                     { 18, "permission", "Permissions.Users.Create", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
-                    { 2, "permission", "Permissions.Users.Create", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
-                    { 3, "permission", "Permissions.Users.Edit", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
-                    { 4, "permission", "Permissions.Users.Delete", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
-                    { 5, "permission", "Permissions.Categories.View", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
-                    { 6, "permission", "Permissions.Categories.Create", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
-                    { 7, "permission", "Permissions.Categories.Edit", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
-                    { 8, "permission", "Permissions.Categories.Delete", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
-                    { 19, "permission", "Permissions.Users.Edit", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
-                    { 9, "permission", "Permissions.Products.View", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
-                    { 11, "permission", "Permissions.Products.Edit", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
-                    { 12, "permission", "Permissions.Products.Delete", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
-                    { 13, "permission", "Permissions.Dashboards.View", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
+                    { 16, "permission", "Permissions.Dashboards.View", new Guid("ec9092a5-a8b6-40e2-69e2-08d88f67500f") },
+                    { 2, "permission", "Permissions.Users.Create", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 3, "permission", "Permissions.Users.Edit", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 4, "permission", "Permissions.Users.Delete", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 5, "permission", "Permissions.Categories.View", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 6, "permission", "Permissions.Categories.Create", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 7, "permission", "Permissions.Categories.Edit", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 8, "permission", "Permissions.Categories.Delete", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 9, "permission", "Permissions.Products.View", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 17, "permission", "Permissions.Users.View", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
+                    { 10, "permission", "Permissions.Products.Create", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 12, "permission", "Permissions.Products.Delete", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 40, "permission", "Permissions.Roles.View", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 41, "permission", "Permissions.Roles.Create", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 42, "permission", "Permissions.Roles.Edit", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 43, "permission", "Permissions.Roles.Delete", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
+                    { 13, "permission", "Permissions.Dashboards.View", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
                     { 14, "permission", "Permissions.Products.View", new Guid("ec9092a5-a8b6-40e2-69e2-08d88f67500f") },
                     { 15, "permission", "Permissions.Categories.View", new Guid("ec9092a5-a8b6-40e2-69e2-08d88f67500f") },
-                    { 16, "permission", "Permissions.Dashboards.View", new Guid("ec9092a5-a8b6-40e2-69e2-08d88f67500f") },
-                    { 17, "permission", "Permissions.Users.View", new Guid("90f990b2-fb59-4c35-3e90-08d88f64e152") },
-                    { 10, "permission", "Permissions.Products.Create", new Guid("D7269987-BECD-43C8-A516-4316C6AA30D2") },
+                    { 11, "permission", "Permissions.Products.Edit", new Guid("d7269987-becd-43c8-a516-4316c6aa30d2") },
                     { 39, "permission", "Permissions.Categories.Create", new Guid("63730b7b-6127-4f9b-0398-08d8904c62b4") }
                 });
         }
@@ -250,6 +254,26 @@ namespace IdentityAuthencation.Migrations
                 table: "AppRoleClaims",
                 keyColumn: "Id",
                 keyValue: 39);
+
+            migrationBuilder.DeleteData(
+                table: "AppRoleClaims",
+                keyColumn: "Id",
+                keyValue: 40);
+
+            migrationBuilder.DeleteData(
+                table: "AppRoleClaims",
+                keyColumn: "Id",
+                keyValue: 41);
+
+            migrationBuilder.DeleteData(
+                table: "AppRoleClaims",
+                keyColumn: "Id",
+                keyValue: 42);
+
+            migrationBuilder.DeleteData(
+                table: "AppRoleClaims",
+                keyColumn: "Id",
+                keyValue: 43);
         }
     }
 }

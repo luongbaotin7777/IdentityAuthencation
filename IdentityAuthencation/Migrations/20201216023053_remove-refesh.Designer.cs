@@ -4,14 +4,16 @@ using IdentityAuthencation.Repository.BaseRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IdentityAuthencation.Migrations
 {
     [DbContext(typeof(RepositoryDbContext))]
-    partial class RepositoryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201216023053_remove-refesh")]
+    partial class removerefesh
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,119 +83,91 @@ namespace IdentityAuthencation.Migrations
                             Id = 1,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Users.View",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 2,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Users.Create",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 3,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Users.Edit",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 4,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Users.Delete",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 5,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Categories.View",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 6,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Categories.Create",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 7,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Categories.Edit",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 8,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Categories.Delete",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 9,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Products.View",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 10,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Products.Create",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 11,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Products.Edit",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 12,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Products.Delete",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
-                        },
-                        new
-                        {
-                            Id = 40,
-                            ClaimType = "permission",
-                            ClaimValue = "Permissions.Roles.View",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
-                        },
-                        new
-                        {
-                            Id = 41,
-                            ClaimType = "permission",
-                            ClaimValue = "Permissions.Roles.Create",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
-                        },
-                        new
-                        {
-                            Id = 42,
-                            ClaimType = "permission",
-                            ClaimValue = "Permissions.Roles.Edit",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
-                        },
-                        new
-                        {
-                            Id = 43,
-                            ClaimType = "permission",
-                            ClaimValue = "Permissions.Roles.Delete",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
                             Id = 13,
                             ClaimType = "permission",
                             ClaimValue = "Permissions.Dashboards.View",
-                            RoleId = new Guid("d7269987-becd-43c8-a516-4316c6aa30d2")
+                            RoleId = new Guid("5a66428d-a7e0-4c43-bae2-13bdc9623240")
                         },
                         new
                         {
@@ -426,11 +400,8 @@ namespace IdentityAuthencation.Migrations
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
-                    b.Property<byte[]>("PasswordHash")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("PasswordSalt")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
@@ -561,9 +532,6 @@ namespace IdentityAuthencation.Migrations
                                 .ValueGeneratedOnAdd()
                                 .HasColumnType("int")
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                            b1.Property<string>("AccessToken")
-                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<Guid>("ApplicationUserId")
                                 .HasColumnType("uniqueidentifier");

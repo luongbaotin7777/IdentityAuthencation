@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IdentityAuthencation.Service.Interface
+namespace IdentityAuthencation.Service.Google
 {
-    public interface IFacebookService
+    public interface IGoogleService
     {
-        ChallengeResult FaceBookLogin();
+        ChallengeResult GoogleLogin();
+
         Task<string> ExternalLoginCallback();
+
     }
 }

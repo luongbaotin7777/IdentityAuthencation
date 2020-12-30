@@ -1,43 +1,36 @@
 ﻿using AutoMapper;
-using IdentityAuthencation.Authorization;
 using IdentityAuthencation.Dtos;
 using IdentityAuthencation.Entities;
 using IdentityAuthencation.Helpers;
 using IdentityAuthencation.Logger;
 using IdentityAuthencation.Repository;
-using IdentityAuthencation.Service.Interface;
 using IdentityAuthencation.Service.RootService;
-using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace IdentityAuthencation.Service.Handle
+namespace IdentityAuthencation.Service.Role
 {
     public class RoleService : BaseService, IRoleService
     {
-        private readonly RoleManager<ApplicationRole> _roleManager;
-        private readonly UserManager<ApplicationUser> _userManager;
         private readonly IMapper _mapper;
 
-        public RoleService(ILoggerManager logger, RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager, IUnitOfWork unitOfwork, IMapper mapper)
+        public RoleService(ILoggerManager logger, IUnitOfWork unitOfwork, IMapper mapper)
             : base(logger, unitOfwork)
         {
-            _roleManager = roleManager;
-            _userManager = userManager;
             _mapper = mapper;
-
         }
+
         public async Task<IEnumerable<ApplicationRole>> GetAllRole()
         {
             return await ProcessRequest(() =>
             {
                 return _unitOfWork.Role.GetAllAsync();
-
             });
         }
+
         public async Task<ApplicationRole> GetRoleById(Guid RoleId)
         {
             return await ProcessRequest(() =>
@@ -49,24 +42,26 @@ namespace IdentityAuthencation.Service.Handle
             });
 
         }
-        public async Task<ApplicationRole> CreateRole(CreateRoleRequestDto request)
+        public async Task<ApplicationRole> CreateRole(RoleRequestDto request)
         {
             return await ProcessRequest(async () =>
             {
-                var role = await _roleManager.FindByNameAsync(request.Name);
+                var role = await _unitOfWork.Role.FindByNameAsync(request.Name);
                 if (role != null) throw new AppException(_logger, $"Role Name: {request.Name} is already taken");
 
                 role = _mapper.Map<ApplicationRole>(request);
 
                 role.NormalizedName = role.Name.ToUpper();
                 role.Name = role.NormalizedName.ToLower();
+
                 await _unitOfWork.Role.CreateAsync(role);
                 await _unitOfWork.SaveAsync();
 
                 return role;
             });
         }
-        public async Task UpdateRole(Guid RoleId, CreateRoleRequestDto request)
+
+        public async Task UpdateRole(Guid RoleId, RoleRequestDto request)
         {
             await ProcessRequest(async () =>
             {
@@ -101,6 +96,7 @@ namespace IdentityAuthencation.Service.Handle
                 }
             });
         }
+
         public async Task DeleteRole(Guid RoleId)
         {
             await ProcessRequest(async () =>
@@ -112,48 +108,70 @@ namespace IdentityAuthencation.Service.Handle
                 await _unitOfWork.SaveAsync();
             });
         }
+
         public async Task<IEnumerable<ApplicationRole>> FindRole(string Name)
         {
             return await ProcessRequest(() =>
             {
                 return _unitOfWork.Role.GetByWhereConditionAsync(x => x.Name.Contains(Name));
             });
-
         }
+
         public async Task AddUserToRole(AddToRoleDto model)
         {
             await ProcessRequest(async () =>
            {
-               var user = await _userManager.FindByNameAsync(model.UserName);
-               if (user == null) throw new AppException(_logger, $"User name: {model.UserName} not found");
+               ApplicationUser existingUser = await _unitOfWork.User.FindByNameAsync(model.UserName);
+               if (existingUser == null) throw new AppException(_logger, $"User name: {model.UserName} not found");
 
-               var role = await _roleManager.FindByNameAsync(model.Name);
-               if (role == null) throw new AppException(_logger, $"Role name: {model.Name} not found");
+               List<ApplicationRole> currentRole = existingUser.UserRoles.Select(x => x.Role).ToList();
 
-               var userRole = await _userManager.GetRolesAsync(user);
-               bool checkrole = userRole.ToList().Contains(model.Name.ToLower());
+               var existingRole = await _unitOfWork.Role.FindByNameAsync(model.RoleName);
+               if (existingRole == null)
+               {
+                   throw new AppException(_logger, $"Role name: {model.RoleName} not found");
+               }
 
-               if (checkrole) throw new AppException(_logger, $"User name: {model.UserName} already belong to Role name: {model.Name}");
-               var result = await _userManager.AddToRoleAsync(user, role.Name);
-               if (!result.Succeeded) throw new AppException(_logger, "Add User to Role failed");
+               if (currentRole.Select(x => x.Name).Contains(model.RoleName.ToLower()))
+               {
+                   throw new AppException(_logger, $"User already has an {model.RoleName} role");
+               }
+
+               ApplicationUserRole applicationUserRole = new ApplicationUserRole()
+               {
+                   RoleId = existingRole.Id,
+                   UserId = existingUser.Id
+               };
+
+               await _unitOfWork.UserRole.CreateAsync(applicationUserRole);
+               await _unitOfWork.SaveAsync();
            });
         }
         public async Task RemoveUserRole(AddToRoleDto model)
         {
             await ProcessRequest(async () =>
             {
-                var user = await _userManager.FindByNameAsync(model.UserName);
-                if (user == null) throw new AppException(_logger, $"User name: {model.UserName} not found");
+                ApplicationUser existingUser = await _unitOfWork.User.FindByNameAsync(model.UserName);
+                if (existingUser == null) throw new AppException(_logger, $"User name: {model.UserName} not found");
 
-                var role = await _roleManager.FindByNameAsync(model.Name);
-                if (role == null) throw new AppException(_logger, $"Role name: {model.Name} not found");
+                List<ApplicationRole> currentRole = existingUser.UserRoles.Select(x => x.Role).ToList();
 
-                var userRole = await _userManager.GetRolesAsync(user);
-                bool checkrole = userRole.ToList().Contains(model.Name.ToLower());
-                if (!checkrole) throw new AppException(_logger, $"User name: {model.UserName} is not in Role name: {model.Name}");
+                var existingRole = await _unitOfWork.Role.FindByNameAsync(model.RoleName);
+                if (existingRole == null)
+                {
+                    throw new AppException(_logger, $"Role name: {model.RoleName} not found");
+                }
 
-                var result = await _userManager.RemoveFromRoleAsync(user, role.Name);
-                if (!result.Succeeded) throw new AppException(_logger, "Remove User from Role failed");
+                if (!currentRole.Select(x => x.Name).Contains(model.RoleName.ToLower()))
+                {
+                    throw new AppException(_logger, $"the user is not in this role: {model.RoleName}");
+                }
+
+                var userRole = await _unitOfWork.UserRole.FirstOrDefaultAsync(x => x.RoleId == existingRole.Id && x.UserId == existingUser.Id);
+                if (userRole == null) throw new AppException(_logger, $"User name: {model.UserName} not belong role: {model.RoleName}");
+
+                _unitOfWork.UserRole.Delete(userRole);
+                await _unitOfWork.SaveAsync();
             });
         }
     }

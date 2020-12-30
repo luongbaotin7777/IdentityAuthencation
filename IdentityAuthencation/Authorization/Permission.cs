@@ -35,6 +35,13 @@ namespace IdentityAuthencation.Authorization
             public const string Edit = "Permissions.Categories.Edit";
             public const string Delete = "Permissions.Categories.Delete";
         }
+        public static class Roles
+        {
+            public const string View = "Permissions.Roles.View";
+            public const string Create = "Permissions.Roles.Create";
+            public const string Edit = "Permissions.Roles.Edit";
+            public const string Delete = "Permissions.Roles.Delete";
+        }
         public static class Tests
         {
             public const string View = "Permissions.Tests.View";

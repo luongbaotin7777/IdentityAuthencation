@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using IdentityAuthencation.Authorization;
 using IdentityAuthencation.Dtos;
 using IdentityAuthencation.Helpers;
-using IdentityAuthencation.Service.Interface;
+using IdentityAuthencation.Service.Role;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,11 +13,11 @@ namespace IdentityAuthencation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "superadministrator")]
     public class RoleController : ControllerBase
     {
         private readonly IRoleService _roleService;
         private readonly IMapper _mapper;
+
         public RoleController(IRoleService roleService, IMapper mapper)
         {
             _roleService = roleService;
@@ -25,22 +26,24 @@ namespace IdentityAuthencation.Controllers
 
         //GET api/role/GetAll
         [HttpGet("GetAll")]
+        [Authorize(Permission.Roles.View)]
         public async Task<IActionResult> GetAllRole()
         {
             var roles = await _roleService.GetAllRole();
-            var roleDtos = _mapper.Map<IList<RoleRequestDto>>(roles);
+            var roleDtos = _mapper.Map<IList<RoleResponseDto>>(roles);
 
             return Ok(roleDtos);
         }
 
         //Get api/role/roleId
         [HttpGet("{RoleId}")]
+        [Authorize(Permission.Roles.View)]
         public async Task<IActionResult> GetRoleById(Guid RoleId)
         {
             try
             {
                 var roles = await _roleService.GetRoleById(RoleId);
-                var roleDtos = _mapper.Map<RoleRequestDto>(roles);
+                var roleDtos = _mapper.Map<RoleResponseDto>(roles);
 
                 return Ok(roleDtos);
             }
@@ -52,7 +55,8 @@ namespace IdentityAuthencation.Controllers
 
         //Post api/role/create
         [HttpPost("Create")]
-        public async Task<IActionResult> CreateRole(CreateRoleRequestDto request)
+        [Authorize(Permission.Roles.Create)]
+        public async Task<IActionResult> CreateRole(RoleRequestDto request)
         {
             try
             {
@@ -68,9 +72,9 @@ namespace IdentityAuthencation.Controllers
 
         //Put api/role/roleId
         [HttpPut("{RoleId}")]
-        public async Task<IActionResult> UpdateRole(Guid RoleId, CreateRoleRequestDto model)
+        [Authorize(Permission.Roles.Edit)]
+        public async Task<IActionResult> UpdateRole(Guid RoleId, RoleRequestDto model)
         {
-
             try
             {
                 await _roleService.UpdateRole(RoleId, model);
@@ -85,6 +89,7 @@ namespace IdentityAuthencation.Controllers
 
         //Delete api/role/roleId
         [HttpDelete("{RoleId}")]
+        [Authorize(Permission.Roles.Delete)]
         public async Task<IActionResult> DeleteRole(Guid RoleId)
         {
             try
@@ -97,11 +102,10 @@ namespace IdentityAuthencation.Controllers
             {
                 return BadRequest(new { meesage = ex.Message });
             }
-
-
         }
 
         [HttpGet("FindRole")]
+        [Authorize(Permission.Roles.View)]
         public async Task<IActionResult> FindRole(string Name)
         {
             return Ok(await _roleService.FindRole(Name));
@@ -109,6 +113,7 @@ namespace IdentityAuthencation.Controllers
 
         //Post api/role/addusertorole
         [HttpPost("AddUserToRole")]
+        [Authorize(Permission.Roles.Create)]
         public async Task<IActionResult> AddUserToRole(AddToRoleDto model)
         {
             try
@@ -121,12 +126,11 @@ namespace IdentityAuthencation.Controllers
             {
                 return BadRequest(new { message = ex.Message });
             }
-
-
         }
 
         //Post api/role/addusertorole
         [HttpPost("RemoveUserRole")]
+        [Authorize(Permission.Roles.Delete)]
         public async Task<IActionResult> RemoveUserRole(AddToRoleDto model)
         {
             try

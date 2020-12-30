@@ -1,31 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using AutoMapper;
-using IdentityAuthencation.Authorization;
 using IdentityAuthencation.Entities;
 using IdentityAuthencation.Extensions;
 using IdentityAuthencation.Helpers;
-using IdentityAuthencation.Repository;
-using IdentityAuthencation.Repository.BaseRepository;
-using IdentityAuthencation.Service.Handle;
-using IdentityAuthencation.Service.Interface;
+using IdentityAuthencation.SeedData;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using static IdentityAuthencation.Authorization.Permission;
-using Serilog;
-using Microsoft.AspNetCore.Authorization;
-using IdentityAuthencation.Authorization.AuthorizationHandler;
-using IdentityAuthencation.SeedData;
 
 namespace IdentityAuthencation
 {

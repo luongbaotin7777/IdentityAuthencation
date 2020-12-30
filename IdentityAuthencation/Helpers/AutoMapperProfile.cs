@@ -13,23 +13,23 @@ namespace IdentityAuthencation.Helpers
         public AutoMapperProfile()
         {
             //Role
-            CreateMap<ApplicationRole, RoleRequestDto>();
-            CreateMap<RoleRequestDto, ApplicationRole>();
+            CreateMap<ApplicationRole, RoleResponseDto>();
+            CreateMap<RoleResponseDto, ApplicationRole>();
 
-            CreateMap<CreateRoleRequestDto, ApplicationRole>();
-            CreateMap<ApplicationRole, CreateRoleRequestDto>();
+            CreateMap<RoleRequestDto, ApplicationRole>();
+            CreateMap<ApplicationRole, RoleRequestDto>();
             //User
-            CreateMap<ApplicationUser, RegisterRequestDto>();
-            CreateMap<RegisterRequestDto, ApplicationUser>();
+            CreateMap<ApplicationUser, RegisterAdminDto>();
+            CreateMap<RegisterAdminDto, ApplicationUser>();
 
             CreateMap<RegisterDto, ApplicationUser>();
 
-            CreateMap<UserDto, ApplicationUser>();
-            CreateMap<ApplicationUser, UserDto>()
+            CreateMap<UserResponseDto, ApplicationUser>();
+            CreateMap<ApplicationUser, UserResponseDto>()
                 .ForMember(dto => dto.roles, opt => opt.MapFrom(x => x.UserRoles.Select(y => y.Role).ToList()));
 
-            CreateMap<UpdateUserRequestDto, ApplicationUser>();
-            CreateMap<ApplicationUser, UpdateUserRequestDto>();
+            CreateMap<UserRequestDto, ApplicationUser>();
+            CreateMap<ApplicationUser, UserRequestDto>();
         }
     }
 }

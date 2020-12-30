@@ -11,5 +11,8 @@ namespace IdentityAuthencation.Repository
     {
         Task<IEnumerable<ApplicationUser>> GetAllUser();
         Task<ApplicationUser> GetUserById(Guid UserId);
+        Task<ApplicationUser> FindByNameAsync(string userName);
+        ApplicationUser FindByName(string userName);
+        Task<ApplicationUser> FindByEmailAsync(string email);
     }
 }

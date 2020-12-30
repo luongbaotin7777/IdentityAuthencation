@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using IdentityAuthencation.Helpers;
-using IdentityAuthencation.Service.Interface;
+using IdentityAuthencation.Service.Google;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +15,7 @@ namespace IdentityAuthencation.Controllers
     public class GoogleController : ControllerBase
     {
         private readonly IGoogleService _googleService;
+
         public GoogleController(IGoogleService googleService)
         {
             _googleService = googleService;

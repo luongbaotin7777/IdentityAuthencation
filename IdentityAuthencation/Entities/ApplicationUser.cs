@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace IdentityAuthencation.Entities
 {
-    public class ApplicationUser:IdentityUser<Guid>
+    public class ApplicationUser : IdentityUser<Guid>
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public byte[] PasswordHash { get; set; }
+        public byte[] PasswordSalt { get; set; }
+
         [JsonIgnore]
         public List<RefreshToken> RefreshTokens { get; set; }
         public DateTime? Dob { get; set; }

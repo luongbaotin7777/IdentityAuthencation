@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using IdentityAuthencation.Helpers;
-using IdentityAuthencation.Service.Interface;
+using IdentityAuthencation.Service.Facebook;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +15,7 @@ namespace IdentityAuthencation.Controllers
     public class FacebookController : ControllerBase
     {
         private readonly IFacebookService _facebookService;
+
         public FacebookController(IFacebookService facebookService)
         {
             _facebookService = facebookService;

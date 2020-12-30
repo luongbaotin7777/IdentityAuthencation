@@ -29,10 +29,10 @@ namespace IdentityAuthencation.SeedData
                 user.Id = Guid.NewGuid();
                 user.Dob = new DateTime(1998, 10, 31);
 
-                IdentityResult result = userManager.CreateAsync
-                (user, "Admin@123").Result;
+                var result = userManager.CreateAsync
+                (user, "Admin@123");
 
-                if (result.Succeeded)
+                if (result.Result.Succeeded)
                 {
                     userManager.AddToRoleAsync(user,
                                         "SuperAdministrator").Wait();
@@ -50,7 +50,7 @@ namespace IdentityAuthencation.SeedData
                 role.NormalizedName = "SUPERADMINISTRATOR";
                 role.Description = "Perform all the operations.";
 
-                IdentityResult roleResult = roleManager.CreateAsync(role).Result;
+                var roleResult = roleManager.CreateAsync(role);
             }
         }
     }

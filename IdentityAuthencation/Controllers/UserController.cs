@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using IdentityAuthencation.Authorization;
 using IdentityAuthencation.Dtos;
-using IdentityAuthencation.Entities;
 using IdentityAuthencation.Helpers;
-using IdentityAuthencation.Service.Interface;
+using IdentityAuthencation.Service.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,6 +18,7 @@ namespace IdentityAuthencation.Controllers
     {
         private readonly IUserService _userService;
         private readonly IMapper _mapper;
+
         public UserController(IMapper mapper, IUserService userService)
         {
             _userService = userService;
@@ -29,7 +28,7 @@ namespace IdentityAuthencation.Controllers
         //Post api/user/registeradmin
         [HttpPost("RegisterAdmin")]
         [Authorize(Roles = "superadministrator")]
-        public async Task<IActionResult> RegisterUserByAdmin(RegisterRequestDto request)
+        public async Task<IActionResult> RegisterUserByAdmin(RegisterAdminDto request)
         {
             try
             {
@@ -87,7 +86,7 @@ namespace IdentityAuthencation.Controllers
             if (response == null)
                 return Unauthorized(new { message = "Invalid token" });
 
-            setTokenCookie(response.RefreshToken);
+            setTokenCookie(response.RefreshToken.ToString());
 
             return Ok(response);
         }
@@ -114,7 +113,7 @@ namespace IdentityAuthencation.Controllers
         {
             var user = _userService.FindbyId(id);
             if (user == null) return NotFound();
-            
+
             return Ok(user.Result.RefreshTokens);
         }
 
@@ -123,11 +122,17 @@ namespace IdentityAuthencation.Controllers
         [Authorize(Permission.Users.View)]
         public async Task<IActionResult> FindAll()
         {
+            try
+            {
+                var users = await _userService.FindAll();
+                var userDtos = _mapper.Map<IList<UserResponseDto>>(users);
 
-            var users = await _userService.FindAll();
-            var userDtos = _mapper.Map<IList<UserDto>>(users);
-
-            return Ok(userDtos);
+                return Ok(userDtos);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
         //Get api/user/UserId
@@ -138,7 +143,7 @@ namespace IdentityAuthencation.Controllers
             try
             {
                 var user = await _userService.FindbyId(UserId);
-                var userDto = _mapper.Map<UserDto>(user);
+                var userDto = _mapper.Map<UserResponseDto>(user);
 
                 return Ok(userDto);
             }
@@ -150,10 +155,10 @@ namespace IdentityAuthencation.Controllers
 
         //PUT api/user/UserId
         [HttpPut("{UserId}")]
-        [Authorize(Permission.Users.Edit)]
-        public async Task<IActionResult> Update(Guid UserId, UpdateUserRequestDto request)
+        //[Authorize(Permission.Users.Edit)]
+        [AllowAnonymous]
+        public async Task<IActionResult> Update(Guid UserId, RegisterDto request)
         {
-
             try
             {
                 await _userService.Update(UserId, request);
@@ -182,23 +187,6 @@ namespace IdentityAuthencation.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-
-        //PUT api/user/changepassword
-        [HttpPut("ChangePassword")]
-        public async Task<IActionResult> ChangePassword(string UserName, string currentPassword, string newPassword, string passwordConfirm)
-        {
-            try
-            {
-                await _userService.ChangePassword(UserName, currentPassword, passwordConfirm, newPassword);
-
-                return Ok();
-            }
-            catch (AppException ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
-        }
-
 
         // helper methods
         private void setTokenCookie(string token)

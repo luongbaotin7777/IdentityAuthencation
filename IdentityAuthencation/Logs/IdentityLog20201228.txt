@@ -1,0 +1,117 @@
+2020-12-28 14:54:21.291 +07:00 [INF] Begin calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 14:54:23.556 +07:00 [INF] End calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 14:54:34.386 +07:00 [INF] Begin calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-12-28 14:54:34.424 +07:00 [INF] End calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-12-28 14:54:54.137 +07:00 [INF] Begin calling function <Delete>b__0
+2020-12-28 14:54:54.270 +07:00 [INF] End calling function <Delete>b__0
+2020-12-28 16:21:18.119 +07:00 [INF] Begin calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 16:21:19.041 +07:00 [INF] End calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 16:21:33.685 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 16:21:33.700 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 16:22:10.119 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:22:43.546 +07:00 [INF] Begin calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 16:22:43.566 +07:00 [INF] End calling function <FindRole>b__0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 16:23:07.030 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-12-28 16:23:07.047 +07:00 [INF] End calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-12-28 16:23:12.857 +07:00 [INF] Begin calling function <GetRoleById>b__0 with type IdentityAuthencation.Entities.ApplicationRole
+2020-12-28 16:23:12.880 +07:00 [ERR] Role id: e7269987-becd-43c8-a516-4316c6aa30d2 not found
+2020-12-28 16:23:50.423 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:23:51.903 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:24:37.264 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:25:02.905 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:25:07.046 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:25:23.324 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:25:37.147 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:25:59.310 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:26:01.511 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:26:09.322 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:28:14.772 +07:00 [INF] Begin calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 16:28:15.283 +07:00 [INF] End calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 16:29:54.475 +07:00 [INF] Begin calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 16:29:54.973 +07:00 [INF] End calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 16:30:04.311 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 16:30:04.325 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 16:30:25.287 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:36:01.078 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 16:36:01.144 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 16:36:17.997 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:41:13.130 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 16:41:13.197 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 16:41:17.968 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:41:18.013 +07:00 [ERR] User name: string not found
+2020-12-28 16:41:44.935 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:41:45.013 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-12-28 16:42:58.428 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 16:42:58.447 +07:00 [ERR] Role name: superadministrator1 not found
+2020-12-28 16:43:17.787 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:04:09.989 +07:00 [INF] Begin calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:04:10.413 +07:00 [INF] End calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:04:27.493 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 17:04:27.509 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 17:04:45.672 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:05:08.448 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-12-28 17:13:12.496 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:13:12.643 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-12-28 17:13:51.117 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:13:51.133 +07:00 [ERR] User name: string not found
+2020-12-28 17:14:06.998 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:14:07.007 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-12-28 17:14:11.902 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:14:11.916 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-12-28 17:14:13.947 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:14:13.957 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-12-28 17:14:14.114 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:14:14.122 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-12-28 17:14:14.389 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:14:14.412 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-12-28 17:14:14.671 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:14:14.680 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-12-28 17:16:50.445 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:16:50.472 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-12-28 17:34:22.820 +07:00 [INF] Begin calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:34:23.308 +07:00 [INF] End calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:34:34.958 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 17:34:34.971 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 17:34:55.539 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 17:34:55.546 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 17:34:56.879 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 17:34:56.889 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 17:36:16.579 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:36:16.643 +07:00 [ERR] User already has an superadministrator role
+2020-12-28 17:36:27.111 +07:00 [INF] Begin calling function <AddUserToRole>b__0
+2020-12-28 17:36:27.145 +07:00 [INF] End calling function <AddUserToRole>b__0
+2020-12-28 17:37:59.172 +07:00 [INF] Begin calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:37:59.306 +07:00 [INF] End calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:38:27.017 +07:00 [INF] Begin calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:38:27.069 +07:00 [INF] End calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:39:35.053 +07:00 [INF] Begin calling function <FindbyId>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-12-28 17:39:35.102 +07:00 [INF] End calling function <FindbyId>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-12-28 17:39:53.300 +07:00 [INF] Begin calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:39:53.488 +07:00 [INF] End calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:40:33.793 +07:00 [INF] Begin calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-12-28 17:40:33.889 +07:00 [INF] End calling function <FindAll>b__7_0 with type System.Collections.Generic.IEnumerable`1[IdentityAuthencation.Entities.ApplicationUser]
+2020-12-28 17:41:25.731 +07:00 [INF] Begin calling function <FindbyId>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-12-28 17:41:25.752 +07:00 [INF] End calling function <FindbyId>b__0 with type IdentityAuthencation.Entities.ApplicationUser
+2020-12-28 17:53:11.998 +07:00 [INF] Begin calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:53:12.492 +07:00 [INF] End calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 17:53:31.093 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 17:53:31.098 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 18:03:18.703 +07:00 [INF] Begin calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 18:03:19.228 +07:00 [INF] End calling function <Login>b__0 with type IdentityAuthencation.Dtos.AuthenticateResponseDto
+2020-12-28 18:03:47.901 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 18:03:47.907 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 18:03:54.325 +07:00 [INF] Begin calling function <RemoveUserRole>b__0
+2020-12-28 18:03:54.360 +07:00 [ERR] User name: string not found
+2020-12-28 18:04:18.821 +07:00 [INF] Begin calling function <RemoveUserRole>b__0
+2020-12-28 18:04:18.853 +07:00 [ERR] Role name: 123 not found
+2020-12-28 18:04:36.373 +07:00 [INF] Begin calling function <RemoveUserRole>b__0
+2020-12-28 18:10:51.858 +07:00 [INF] Begin calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 18:10:51.899 +07:00 [INF] End calling function <GetAllRole>b__4_0 with type System.Collections.Generic.List`1[IdentityAuthencation.Entities.ApplicationRole]
+2020-12-28 18:11:08.289 +07:00 [INF] Begin calling function <RemoveUserRole>b__0
+2020-12-28 18:11:08.322 +07:00 [ERR] User name: Tin4565 not found
+2020-12-28 18:11:13.667 +07:00 [INF] Begin calling function <RemoveUserRole>b__0
+2020-12-28 18:11:13.695 +07:00 [ERR] Role name: 123 not found
+2020-12-28 18:11:24.434 +07:00 [INF] Begin calling function <RemoveUserRole>b__0
+2020-12-28 18:11:24.440 +07:00 [ERR] the user is not in this role: postmanager
+2020-12-28 18:11:55.193 +07:00 [INF] Begin calling function <RemoveUserRole>b__0
+2020-12-28 18:11:55.353 +07:00 [INF] End calling function <RemoveUserRole>b__0

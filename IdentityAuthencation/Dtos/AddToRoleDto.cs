@@ -11,6 +11,6 @@ namespace IdentityAuthencation.Dtos
         [Required]
         public string UserName { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string RoleName { get; set; }
     }
 }

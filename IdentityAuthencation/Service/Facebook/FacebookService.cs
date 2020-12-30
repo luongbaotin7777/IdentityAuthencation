@@ -3,8 +3,9 @@ using IdentityAuthencation.Entities;
 using IdentityAuthencation.Helpers;
 using IdentityAuthencation.Logger;
 using IdentityAuthencation.Repository;
-using IdentityAuthencation.Service.Interface;
+using IdentityAuthencation.Service.Role;
 using IdentityAuthencation.Service.RootService;
+using IdentityAuthencation.Service.Token;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,22 +14,22 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace IdentityAuthencation.Service.Handle
+namespace IdentityAuthencation.Service.Facebook
 {
     public class FacebookService : BaseService, IFacebookService
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ITokenService _tokenService;
         private readonly IRoleService _roleService;
-        public FacebookService(IUnitOfWork unitOfWork, ILoggerManager logger, SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, ITokenService tokenService, IRoleService roleService)
+
+        public FacebookService(IUnitOfWork unitOfWork, ILoggerManager logger, SignInManager<ApplicationUser> signInManager, ITokenService tokenService, IRoleService roleService)
         : base(logger, unitOfWork)
         {
             _signInManager = signInManager;
-            _userManager = userManager;
             _tokenService = tokenService;
             _roleService = roleService;
         }
+
         public ChallengeResult FaceBookLogin()
         {
             string redirectUrl = "/api/signin-facebook";
@@ -36,6 +37,7 @@ namespace IdentityAuthencation.Service.Handle
 
             return new ChallengeResult("Facebook", properties);
         }
+
         public async Task<string> ExternalLoginCallback()
         {
             return await ProcessRequest(async () =>
@@ -43,7 +45,7 @@ namespace IdentityAuthencation.Service.Handle
                 ExternalLoginInfo info = await _signInManager.GetExternalLoginInfoAsync();
                 if (info == null) throw new AppException(_logger, "Failed to get information");
 
-                var userEmailExists = await _userManager.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
+                ApplicationUser userEmailExists = await _unitOfWork.User.FindByEmailAsync(info.Principal.FindFirst(ClaimTypes.Email).Value);
                 if (userEmailExists == null)
                 {
                     ApplicationUser appUser = new ApplicationUser()
@@ -55,23 +57,38 @@ namespace IdentityAuthencation.Service.Handle
                         EmailConfirmed = true,
                     };
 
-                    IdentityResult identityResult = await _userManager.CreateAsync(appUser);
-                    if (!identityResult.Succeeded) throw new AppException(_logger, "Failed to create User");
-                    var claims = new List<Claim>()
-                        {
+                    await _unitOfWork.User.CreateAsync(appUser);
+                    await _unitOfWork.SaveAsync();
+
+                    List<Claim> claims = new List<Claim>()
+                       {
                         new Claim(ClaimTypes.GivenName,appUser.FirstName),
                         new Claim(ClaimTypes.Surname,appUser.LastName),
                         new Claim(ClaimTypes.Email,appUser.Email),
-                        };
-                    var role = new AddToRoleDto()
+                       };
+
+                    AddToRoleDto role = new AddToRoleDto()
                     {
-                        Name = "USER",
+                        RoleName = "USER",
                         UserName = appUser.UserName
                     };
-                    await _roleService.AddUserToRole(role);
-                    await _userManager.AddClaimsAsync(appUser, claims);
 
-                    return await _tokenService.GenerateJWTToken(appUser, 1);
+                    await _roleService.AddUserToRole(role);
+                    foreach (var claim in claims)
+                    {
+                        var userClaim = new ApplicationUserClaim()
+                        {
+                            UserId = appUser.Id,
+                            ClaimType = claim.Type,
+                            ClaimValue = claim.Value
+                        };
+
+                        await _unitOfWork.UserClaim.CreateAsync(userClaim);
+                    }
+
+                    await _unitOfWork.SaveAsync();
+
+                    return _tokenService.GenerateJWTToken(appUser, 1);
                 }
                 else
                 {
@@ -81,13 +98,12 @@ namespace IdentityAuthencation.Service.Handle
                     userEmailExists.UserName = info.Principal.FindFirst(ClaimTypes.Email).Value;
                     userEmailExists.EmailConfirmed = true;
 
-                    IdentityResult identityResult = await _userManager.UpdateAsync(userEmailExists);
-                    if (!identityResult.Succeeded) throw new AppException(_logger, "Failed to Update User");
+                    _unitOfWork.User.Update(userEmailExists);
+                    await _unitOfWork.SaveAsync();
 
-                    return await _tokenService.GenerateJWTToken(userEmailExists, 1);
+                    return _tokenService.GenerateJWTToken(userEmailExists, 1);
                 }
             });
-
         }
     }
 }

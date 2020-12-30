@@ -1,5 +1,6 @@
 ﻿using IdentityAuthencation.Entities;
 using IdentityAuthencation.Repository.BaseRepository;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,9 @@ namespace IdentityAuthencation.Repository
 
         }
 
+        public async Task<ApplicationRole> FindByNameAsync(string roleName)
+        {
+            return await _context.Roles.FirstOrDefaultAsync(x => x.Name == roleName);
+        }
     }
 }

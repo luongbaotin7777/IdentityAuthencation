@@ -9,6 +9,24 @@
     <Compile Remove="Migrations\20201123024103_AddData_User_Role.Designer.cs" />
     <Compile Remove="Migrations\20201126075312_Create_permission_superadmin.cs" />
     <Compile Remove="Migrations\20201126075312_Create_permission_superadmin.Designer.cs" />
+    <Compile Remove="Migrations\20201228085809_add-role-claim.cs" />
+    <Compile Remove="Migrations\20201228085809_add-role-claim.Designer.cs" />
+    <Compile Remove="Migrations\20201228085950_add-role-claim.cs" />
+    <Compile Remove="Migrations\20201228085950_add-role-claim.Designer.cs" />
+    <Compile Remove="Migrations\20201228090027_add-role-claim.cs" />
+    <Compile Remove="Migrations\20201228090027_add-role-claim.Designer.cs" />
+    <Compile Remove="Migrations\20201228090128_add-role-claim.cs" />
+    <Compile Remove="Migrations\20201228090128_add-role-claim.Designer.cs" />
+    <Compile Remove="Migrations\20201228090918_add-role-claim.cs" />
+    <Compile Remove="Migrations\20201228090918_add-role-claim.Designer.cs" />
+    <Compile Remove="Migrations\20201228091158_add-role-claim.cs" />
+    <Compile Remove="Migrations\20201228091158_add-role-claim.Designer.cs" />
+    <Compile Remove="Migrations\20201228091346_add-role-claim.cs" />
+    <Compile Remove="Migrations\20201228091346_add-role-claim.Designer.cs" />
+    <Compile Remove="Migrations\20201228104650_add-role-claim-for-supper.cs" />
+    <Compile Remove="Migrations\20201228104650_add-role-claim-for-supper.Designer.cs" />
+    <Compile Remove="Migrations\20201229022949_add-password.cs" />
+    <Compile Remove="Migrations\20201229022949_add-password.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,12 +1,8 @@
-﻿
-
-using IdentityAuthencation.Authorization;
+﻿using IdentityAuthencation.Authorization;
 using IdentityAuthencation.Entities;
 using IdentityAuthencation.Logger;
 using IdentityAuthencation.Repository;
 using IdentityAuthencation.Repository.BaseRepository;
-using IdentityAuthencation.Service.Handle;
-using IdentityAuthencation.Service.Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -14,29 +10,35 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
 using System.Text;
-using Swashbuckle.AspNetCore.Swagger;
 using static IdentityAuthencation.Authorization.Permission;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authorization;
 using IdentityAuthencation.Authorization.AuthorizationHandler;
+using System.Threading.Tasks;
+using IdentityAuthencation.Service.User;
+using IdentityAuthencation.Service.Role;
+using IdentityAuthencation.Service.Token;
+using IdentityAuthencation.Service.Google;
+using IdentityAuthencation.Service.Facebook;
 
 namespace IdentityAuthencation.Extensions
 {
     public static class ServiceExtensions
     {
-
+        /*-----------------------------/
+         * Connect Sql Db
+         *----------------------------*/
         public static void ConfigSqlContext(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<RepositoryDbContext>(options =>
             {
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
-
         }
+        /*-----------------------------------/
+         * Config Jwt token & External Authen
+         *----------------------------------*/
         public static void ConfigJwtToken(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddAuthentication(auths =>
@@ -54,7 +56,6 @@ namespace IdentityAuthencation.Extensions
 
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
-
                     ValidateIssuer = false,
                     ValidateAudience = false,
                     ValidateLifetime = true,
@@ -63,14 +64,26 @@ namespace IdentityAuthencation.Extensions
                     ClockSkew = TimeSpan.Zero,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwts:Key"]))
                 };
+
+                options.Events = new JwtBearerEvents
+                {
+                    OnAuthenticationFailed = context =>
+                    {
+                        if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+                        {
+                            context.Response.Headers.Add("Token-Expired", "true");
+                        }
+
+                        return Task.CompletedTask;
+                    }
+                };
             })
             //Goole authen
             .AddGoogle(options =>
-
             {
                 options.SignInScheme = IdentityConstants.ExternalScheme;
-                IConfigurationSection googleAuthNSection =
-                configuration.GetSection("Authentication:Google");
+
+                IConfigurationSection googleAuthNSection = configuration.GetSection("Authentication:Google");
 
                 options.ClientId = googleAuthNSection["ClientId"];
                 options.ClientSecret = googleAuthNSection["ClientSecret"];
@@ -78,8 +91,8 @@ namespace IdentityAuthencation.Extensions
              .AddFacebook(options =>
              {
                  options.SignInScheme = IdentityConstants.ExternalScheme;
-                 IConfigurationSection facebookAuthNSection =
-                 configuration.GetSection("Authentication:Facebook");
+
+                 IConfigurationSection facebookAuthNSection = configuration.GetSection("Authentication:Facebook");
 
                  options.AppId = facebookAuthNSection["AppId"];
                  options.AppSecret = facebookAuthNSection["AppSecret"];
@@ -90,6 +103,7 @@ namespace IdentityAuthencation.Extensions
             services.AddIdentity<ApplicationUser, ApplicationRole>()
                     .AddEntityFrameworkStores<RepositoryDbContext>()
                     .AddDefaultTokenProviders();
+
             services.Configure<IdentityOptions>(options =>
             {
                 // Password settings.
@@ -131,7 +145,6 @@ namespace IdentityAuthencation.Extensions
             //DI GoogleService
             services.AddScoped<IGoogleService, GoogleService>();
             services.AddScoped<IFacebookService, FacebookService>();
-
         }
 
         public static void ConfigureLoggerService(this IServiceCollection services)
@@ -143,6 +156,7 @@ namespace IdentityAuthencation.Extensions
         {
             //DI Permission
             services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
+
             services.AddAuthorization(options =>
             {
                 //Policy for users
@@ -208,8 +222,27 @@ namespace IdentityAuthencation.Extensions
                 {
                     policy.AddRequirements(new PermissionRequirement(Permission.Tests.View));
                 });
+
+                //Policy for Roles
+                options.AddPolicy(Permission.Roles.Create, policy =>
+                {
+                    policy.AddRequirements(new PermissionRequirement(Permission.Roles.Create));
+                });
+                options.AddPolicy(Permission.Roles.View, policy =>
+                {
+                    policy.AddRequirements(new PermissionRequirement(Permission.Roles.View));
+                });
+                options.AddPolicy(Permission.Roles.Edit, policy =>
+                {
+                    policy.AddRequirements(new PermissionRequirement(Permission.Roles.Edit));
+                });
+                options.AddPolicy(Permission.Roles.Delete, policy =>
+                {
+                    policy.AddRequirements(new PermissionRequirement(Permission.Roles.Delete));
+                });
             });
         }
+
         public static void ConfigureSwagger(this IServiceCollection services)
         {
             services.AddSwaggerGen(setup =>
@@ -237,9 +270,7 @@ namespace IdentityAuthencation.Extensions
                     {
                         { jwtSecurityScheme, Array.Empty<string>() }
                     });
-
             });
-
         }
     }
 }

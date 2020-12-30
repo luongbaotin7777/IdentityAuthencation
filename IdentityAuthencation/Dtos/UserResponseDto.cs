@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IdentityAuthencation.Dtos
 {
-    public class UserDto
+    public class UserResponseDto
     {
         public Guid Id { get; set; }
         public string UserName { get; set; }
@@ -17,6 +17,6 @@ namespace IdentityAuthencation.Dtos
         public string LastName { get; set; }
         public DateTime? Dob { get; set; }
 
-        public virtual IList<CreateRoleRequestDto> roles { get; set; }
+        public virtual IList<RoleRequestDto> roles { get; set; }
     }
 }

@@ -9,6 +9,5 @@ namespace IdentityAuthencation.Entities
     public class ApplicationRoleClaim : IdentityRoleClaim<Guid>
     {
         public virtual ApplicationRole Role { get; set; }
-
     }
 }
